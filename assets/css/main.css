@@ -97,12 +97,18 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+<<<<<<< HEAD
 	body, input, select, textarea {
 		color: #474747;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
+=======
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+		color: #484d55;
+>>>>>>> b098a69355e73784a52a8548cce4d6949e2f4fce
 	}
 
 	a {
