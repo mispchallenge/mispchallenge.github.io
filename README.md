@@ -1,2 +1,0 @@
-# mispchallenge.github.io
-test
