@@ -84,7 +84,28 @@
                                                                                     <img src="images/exp1.jpg" alt="An example of recording in home TV scenario" style="width:600px;padding:0px;border:0" />
                                                                                     <figcaption>Fig1.An example of recording in home TV scenario</figcaption>
                                                                                     </figure>
-                                                                                  </center>
+									          </center>
+									
+									<h3>Device</h3>
+									        <center>
+                                                                                    <figure style="padding:0px;border:0px; margin:10px">
+                                                                                    <img src="images/Fig2.jpg" alt="Figure2:A real shot of recording in home TV scenario" style="width:620px;padding:0px;border:0" />
+                                                                                    <figcaption>Figure2:A real shot of recording in home TV scenario</figcaption>
+                                                                                    </figure>
+									        </center>
+									        <p>A real shot of the recording scene is shown in Fig.2. According to the distance between the device and the speaker, multiple recording devices were divided into 3 categories:</p>
+									        <p>A.Far devices: a linear microphone array (6 mic, 16 kHz, 16-bit) and a wide-angle camera (1080p, 25 fps, 2pi/3), which are placed 3-5m away from the speaker. All participants appear in the camera, which brings speakers position information while reducing the resolution of the lip region of interest (ROI);</p>
+									        <p>B.Middle devices: a linear microphone array (2 mic, 44.1 kHz, 16-bit) and n high-definition cameras (720p, 25fps, pi/2), which are placed 0.8-1.5m away from the speaker, where n is the number of participants within this conversation. There is only the corresponding speaker in each camera, the lip ROI is recorded clearly;</p>
+									        <p>C.Near devices: n high-fidelity microphones (44.1 kHz, 16-bit), which were stuck in the middle of the corresponding speaker's chin, respectively. The collected audio signal is rarely interfered by the off-target source and the SNR is estimated to be greater than 15 db. This provides a guarantee for high-quality manual transcription.</p>
+									        <center>
+                                                                                    <figure style="padding:0px;border:0px; margin:10px">
+                                                                                    <img src="images/Fig3.jpg" alt="Figure3:Real shots of various devices" style="width:700px;padding:0px;border:0" />
+                                                                                    <figcaption>Figure3:Real shots of various devices</figcaption>
+                                                                                    </figure>
+									        </center>
+									        <p>Fig.3 shows real shots of various devices. Various devices have resulted in inconsistent clocks. We address this from two aspects: synchronization devices and manual post-processing.</p>
+									        <p>D.Synchronization devices: the sound card (ZOOM F8n) is used to synchronize the clock of the middle linear microphone array and the clocks of near high-fidelity microphones while Vicando software, running on the industrial PC (MIC-770), is used to synchronize the clocks of all cameras.</p>
+									        <p>Even if synchronization devices were used, there are still 3 different clocks, i.e. the clock of the sound card, the clock of the far linear microphone array and the clock of the industrial PC. They are synchronized by finding the mark point manually. A specific behavior, i.e. knocking the cup, would be done while the recording is started. The visual frame where the cup wall and the cup cover are in contact and the waveform point which is corresponding to the impact sound are aligned manually.</p>
 									
 									<h3>Tracks</h3>
 									       <p>Based on our annotations for current corpus, actually we can set all 5 tasks, namely:</p>
