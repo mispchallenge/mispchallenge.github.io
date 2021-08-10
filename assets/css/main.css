@@ -2084,8 +2084,8 @@ input, select, textarea {
 		}
 
 			.image.left img {
-				width: 120px;
-  				height: 120px;
+				width: 100%;
+  				height: 100%;
  				display: flex;
   				border-radius: 50%;
   				align-items: center;
