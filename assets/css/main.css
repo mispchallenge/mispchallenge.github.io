@@ -2084,8 +2084,15 @@ input, select, textarea {
 		}
 
 			.image.left img {
-				display: block;
-				width: 100%;
+				width: 120px;
+  				height: 120px;
+ 				display: flex;
+  				border-radius: 50%;
+  				align-items: center;
+  				justify-content: center;
+  				overflow: hidden;
+				/*display: block;
+				width: 100%;*/
 			}
 
 		.image.fit {
@@ -2515,7 +2522,7 @@ input, select, textarea {
 		}
 
 		.box.post .inner {
-			margin-left: calc(30% + 2em);
+			margin-left: calc(20% + 2em);
 		}
 
 			.box.post .inner > :last-child {
