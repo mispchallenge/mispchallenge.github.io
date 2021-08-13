@@ -191,7 +191,7 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: -5% auto -3% auto;
+		margin: -3% auto -3% auto;
 		max-width: 100%;
 		width: 1400px;
 	}
@@ -2076,6 +2076,10 @@ input, select, textarea {
 	}
 
 		.image img {
+			width: 30%;
+  			height: 30%;
+  			align-items: center;
+  			justify-content: center;
 			display: block;
 			border-radius: 5px;
 		}
