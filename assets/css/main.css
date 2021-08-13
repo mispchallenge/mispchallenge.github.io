@@ -191,10 +191,16 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: -3% auto -3% auto;
+		margin: -3% auto -2% auto;
 		max-width: 100%;
 		width: 1400px;
 	}
+
+/*	.container1 {
+		margin: -3% auto -1% auto;
+		max-width: 100%;
+		width: 1400px;
+	}*/
 
 		@media screen and (max-width: 1680px) {
 
