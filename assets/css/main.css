@@ -2406,14 +2406,14 @@ input, select, textarea {
 			}
 
 			table.default td {
-				padding: 0.5sem 1em 0.5em 1em;
+				padding: 0.3sem 0.5em 0.3em 0.5em;
 				text-align: center;
 				vertical-align: center;
 			}
 
 			table.default th {
 				font-weight: 800;
-				padding: 0.5em 1em 0.5em 1em;
+				padding: 0.3em 0.5em 0.3em 0.5em;
 				text-align: center;
 				vertical-align: center;
 			}
