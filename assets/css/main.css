@@ -2392,11 +2392,51 @@ input, select, textarea {
 	}
 
 		table.default {
-			width: 100%;
+			width: 70%;
+			border:1px solid ;
 		}
 
-			table.default tbody tr {
+			table.default tr {
 				border-bottom: solid 1px #e0e0e0;
+				text-align: center;
+			}
+
+			table.default tbody {
+				border-bottom: solid 1px;
+			}
+
+			table.default td {
+				padding: 0.5sem 1em 0.5em 1em;
+				text-align: center;
+				vertical-align: center;
+			}
+
+			table.default th {
+				font-weight: 800;
+				padding: 0.5em 1em 0.5em 1em;
+				text-align: center;
+				vertical-align: center;
+			}
+
+			table.default thead {
+				background-color: #555555;
+				background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+				background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+				color: #fff;
+			}
+
+/*		table.tabel1 {
+			width: 70%;
+			border:1px solid ;
+		}
+
+			table.default tr {
+			}
+
+			table.default tbody {
+				border-bottom: solid 1px;
 			}
 
 			table.default td {
@@ -2404,7 +2444,7 @@ input, select, textarea {
 			}
 
 			table.default th {
-				font-weight: 600;
+				font-weight: 800;
 				padding: 0.5em 1em 0.5em 1em;
 				text-align: left;
 			}
@@ -2416,7 +2456,8 @@ input, select, textarea {
 				background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 				color: #fff;
-			}
+			}*/
+
 
 /* Button */
 
