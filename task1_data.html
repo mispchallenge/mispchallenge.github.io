@@ -56,26 +56,113 @@
 					<div class="container">
 						<!-- <h2>Task1 Datasets</h2> -->
 						<h1 style="font-size: 150%;">Task1 Datasets</h1>
-						<p></p>
+						<center>
+							<table  class='default'>
+							    <tr style="border: solid 1px;">
+							        <th rowspan="2" style="border: solid 1px;">Dataset</th>
+							        <th colspan='2' style="border: solid 1px;">Train</th>
+							        <th colspan='2' style="border: solid 1px;">Dev</th>
+							        <th colspan='2' style="border: solid 1px;">Eval</th>
+							        <th colspan='2' style="border: solid 1px;">Total</th>
+							    </tr> 
+							    <tr style="vertical-align: center; border: solid 1px;">
+							        <th style="border: solid 1px;">Positive</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</th>
+							        <th style="border: solid 1px;">Positive</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</th>
+							        <th style="border: solid 1px;">Positive</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</th>
+							        <th style="border: solid 1px;">Positive</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Duration (h)</th>
+							        <td style="border: solid 1px;">6.21</td>
+							        <td style="border: solid 1px;">93.79</td>
+							        <td style="border: solid 1px;">0.78</td>
+							        <td style="border: solid 1px;">1.11</td>
+							        <td style="border: solid 1px;">0.81</td>
+							        <td style="border: solid 1px;">1.80</td>
+							        <td style="border: solid 1px;">7.80</td>
+							        <td style="border: solid 1px;">96.70</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Session</th>
+							        <td colspan='2' style="border: solid 1px;">88</td>
+							        <td colspan='2' style="border: solid 1px;">10</td>
+							        <td colspan='2' style="border: solid 1px;">13</td>
+							        <td colspan='2' style="border: solid 1px;">111</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Room</th>
+							        <td colspan='2' style="border: solid 1px;">22</td>
+							        <td colspan='2' style="border: solid 1px;">5</td>
+							        <td colspan='2' style="border: solid 1px;">6</td>
+							        <td colspan='2' style="border: solid 1px;">33</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Participant</th>
+							        <td colspan='2' style="border: solid 1px;">257</td>
+							        <td colspan='2' style="border: solid 1px;">35</td>
+							        <td colspan='2' style="border: solid 1px;">46</td>
+							        <td colspan='2' style="border: solid 1px;">338</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Male</th>
+							        <td colspan='2' style="border: solid 1px;">79</td>
+							        <td colspan='2' style="border: solid 1px;">11</td>
+							        <td colspan='2' style="border: solid 1px;">27</td>
+							        <td colspan='2' style="border: solid 1px;">117</td>
+							    </tr>
+							    <tr style="border: solid 1px;">
+							        <th style="border: solid 1px;">Female</th>
+							        <td colspan='2' style="border: solid 1px;">178</td>
+							        <td colspan='2' style="border: solid 1px;">24</td>
+							        <td colspan='2' style="border: solid 1px;">19</td>
+							        <td colspan='2' style="border: solid 1px;">221</td>
+							    </tr>
+							    <tr>
+							        <th colspan="12" style="border: solid 1px;">Tab.1.  Task1 Dataset</th>
+							    </tr>
+							</table>
+						</center>
+
+						<p>
+							We plan to release an audio-visual wake word spotting dataset collected in home TV scenarios. The recording scenes can refer to Fig. 1. The wake-up word is “Xiao T Xiao T”. There are 338 speakers. The dataset’s accent is Mandarin and all data were collected in 33 real rooms. A sample will be taken as a positive sample if the wake-up word is included, otherwise it will be regarded as a negative sample. For each sample, at most one wake-up word is included. For the duration, different channels audio data are calculated separately. The statistics of the dataset are shown in Tab.1. 
+						</p>
+
+						<center>
+							<figure style="padding:0px;border:0px; margin:10px">
+                            <img src="images/Fig6.png" style="width:800px;padding:0px;border:0" />
+                            </figure>
+						</center>
+
+						<p>
+						The data was divided into three subsets: Training, Development and Evaluation. Dataset split follows speaker and room independence, i.e no speaker and room are repeated among the three splits. The audio data, video data follow the directory structure shown in Tab.2. Each audio/video directory has subdirectories for training, development, and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording devices in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording devices in the video directory.
+						</p>
+						<p><b>Audio</b></p>
+						<p>
+							In order to ensure the fair data resources and highlight the focus of the research, we apply sum beamforming on multi-channel audio signals to generate single-channel signals. Finally, each audio sample is stored in a single-channel 16-bit stream with a sampling rate of 16kHz. The WAV files are named as follows:</br> 
+							Far-field audio:</br> 
+							< Room ID>_< Speakers IDs >_< Configuration ID >_< Index > _Far_< Channel ID >_< Segment ID >.wav</br> 
+							Middle-field audio:</br> 
+							< Room ID >_< Speakers IDs >_< Configuration ID >_< Index > _Middle_< Channel ID >_< Segment ID >.wav</br> 
+							Near-field audio:</br> 
+							< Room ID>_< Speakers IDs >_< Configuration ID>_< Index > _Near_< Speaker ID >_< Segment ID >.wav</br> 
+							Here, < Segment ID > represents the number of utterance segmentation.</br> 
+						</p>
+						<p><b>Video</b></p>
+						<p>
+							All video data are distributed as MP4 files with a frame rate of 25 fps. Each session consists of the recordings made by the far-field wide-angle camera and the middle-field high-definition cameras worn by each participant. These MP4 files are named as follows:
+							Far-field wide-angle camera (1080p):</br> 
+							< Room ID>_< Speakers IDs >_< Configuration ID >_< Index > _Far_< Segment ID >.mp4</br> 
+							Middle-field high-definition camera (720p):</br> 
+							< Room ID >_< Speakers IDs >_< Configuration ID >_< Index > _Middle_< Speaker ID >_< Segment ID >.mp4</br> 
+						</p>
 					</div>
 				</section>
 
 			<!-- Gigantic Heading -->
-				<section class="wrapper style2">
-					<div class="container">
-						<h1 style="font-size: 150%;">......</h1>
-<!-- 						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
-						</header> -->
-					</div>
-				</section>
-
-				<section class="wrapper style1">
-					<div class="container">
-						<h1 style="font-size: 150%;">......</h1>
-					</div>
-				</section>
 
 			<!-- Footer -->
 				<div id="footer">
