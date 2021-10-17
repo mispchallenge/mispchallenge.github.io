@@ -2627,7 +2627,7 @@ input, select, textarea {
 			content: '';
 			display: block;
 			width: 100%;
-			height: 0.75em;
+			height: 0.72em;
 			background-color: #37c0fb;
 			background-image: url("images/bg01.png");
 		}
