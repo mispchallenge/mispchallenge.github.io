@@ -128,21 +128,21 @@
 						</center>
 
 						<p>
-							We plan to release an audio-visual wake word spotting dataset collected in home TV scenarios. The recording scenes can refer to Fig. 1. The wake-up word is “Xiao T Xiao T”. There are 338 speakers. The dataset’s accent is Mandarin and all data were collected in 33 real rooms. A sample will be taken as a positive sample if the wake-up word is included, otherwise it will be regarded as a negative sample. For each sample, at most one wake-up word is included. For the duration, different scenarios data (i.e., far, middle, and near field) are calculated separately. The statistics of the dataset are shown in Tab.1. 
+							We plan to release an audio-visual wake word spotting dataset collected in home TV scenarios. The recording scenes can refer to Fig. 1. The wake-up word is “Xiao T Xiao T”. There are 338 speakers. The dataset’s accent is Mandarin and all data were collected in 33 real rooms. A sample will be taken as a positive sample if the wake-up word is included, otherwise it will be regarded as a negative sample. For each sample, at most one wake-up word is included. For the duration, different scenarios data (i.e. far, middle, and near field) are calculated separately. The statistics of the dataset are shown in Tab.1 above. 
 						</p>
 
 						<center>
 							<figure style="padding:0px;border:0px; margin:10px">
-                            <img src="images/Fig6.png" style="width:70%;padding:0px;border:0" />
+                            <img src="images/Fig6.png" style="width:60%;padding:0px;border:0" />
                             </figure>
 						</center>
 
 						<p>
-						The data was divided into three subsets: Training, Development and Evaluation. Dataset split follows speaker and room independence, i.e no speaker and room are repeated among the three splits. The audio data, video data follow the directory structure shown in Tab.2. Each audio/video directory has subdirectories for training, development, and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording devices in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording devices in the video directory.
+						The data was divided into three subsets: Training, Development and Evaluation. Dataset split follows speaker and room independence, i.e. no speaker and room are repeated among the three splits. The audio data, video data follow the directory structure shown in Tab.2. Each positive/negative directory has subdirectories for audio/video. Each audio/video directory has subdirectories for training, development, and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording devices in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording devices in the video directory. In addition, we will provide some noise data. 
 						</p>
 						<p><b>Audio</b></p>
 						<p>
-							In order to ensure the fair data resources and highlight the focus of the research, we apply sum beamforming on multi-channel audio signals to generate single-channel signals. Finally, each audio sample is stored in a single-channel 16-bit stream with a sampling rate of 16kHz. The WAV files are named as follows:</br> 
+							Each audio sample is stored in a single-channel 16-bit stream with a sampling rate of 16kHz. The WAV files are named as follows:</br> 
 							Far-field audio:</br> 
 							< Room ID>_< Speakers IDs >_< Configuration ID >_< Index > _Far_< Channel ID >_< Segment ID >.wav</br> 
 							Middle-field audio:</br> 
