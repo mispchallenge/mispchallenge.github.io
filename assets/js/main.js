@@ -37,10 +37,13 @@
 
 		// Bar.
 			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
+			'<div id="titleBar">' +
+				'<a href="#navPanel" class="toggle">'+
+				'</a>' +
+				'<h1  class="title" style="font-size:60%;">'+
+				$('#logo').html() + 
+				'</h1>'+				
+			'</div>'
 			)
 				.appendTo($body);
 
