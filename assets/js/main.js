@@ -40,10 +40,10 @@
 			'<div id="titleBar">' +
 				'<a href="#navPanel" class="toggle">'+
 				'</a>' +
-				'<h1  class="title" style="font-size:20%;">'+
+				'<h1  class="title" style="font-size:60%;margin:4%">'+
 				$('#logo').html() + 
 				'</h1>'+				
-			'</div>'
+				'</div>'
 			)
 				.appendTo($body);
 
