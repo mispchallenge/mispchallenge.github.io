@@ -40,7 +40,7 @@
 			'<div id="titleBar">' +
 				'<a href="#navPanel" class="toggle">'+
 				'</a>' +
-				'<h1  class="title" style="font-size:60%;">'+
+				'<h1  class="title" style="font-size:20%;">'+
 				$('#logo').html() + 
 				'</h1>'+				
 			'</div>'
