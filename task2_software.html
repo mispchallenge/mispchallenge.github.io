@@ -8,6 +8,7 @@
 div.ml1 {
   margin-left: 30px;
 }
+ul.a {list-style-type: circle;}
 </style>
 
 <html>
@@ -61,31 +62,47 @@ div.ml1 {
 			<section class="wrapper style1">
 					<div class="container">
 						<h1 style="font-size: 150%;">Task2 NN-HMM Based AVSR Baseline</h1>
+						<p>For details, please refer to <a href="https://github.com/mispchallenge/misp2021_baseline/tree/master/task2_avsr_nn_hmm"> Github link </a></p>
 						<ul>
-					        <li><strong>Data preparation</strong></li>
-					        <ul>
-					        <li>speech enhancement</li>
-					        <p>We provide two baseline speech enhancement front-ends, Weighted Prediction Error(WPE) dereverberation and  weighted delay-and-sum(DAS) beamforming, to reduce reverberations and noises of speech signals. These two algorithms are implemented with open-source toolkits, [nara_wpe](https://github.com/fgnt/nara_wpe) and [BeamformIt](https://github.com/xanguera/BeamformIt), respectively.</p>
-							<li>prepare data and language directory for kaldi</li>
-							<p>For training, development, and test sets, we prepare data directories and the lexicon in the format expected by  [kaldi](http://kaldi-asr.org/doc/data_prep.html) respectively. Note that we choose [DaCiDian](https://github.com/aishell-foundation/DaCiDian.git) raw resource and convert it to kaldi lexicon format.</p>
-							</ul>
-							<li><strong>Language model</strong></li>
-							<p>We segment MISP speech transcription for language model training by applying [DaCiDian](https://github.com/aishell-foundation/DaCiDian.git) as dict and [Jieba](https://github.com/fxsjy/jieba) open-source toolkit. For the language model, we choose a maximum entropy-based 3-gram model, which achieves the best perplexity, from n-gram(n=2,3,4) models trained on MISP speech transcripts with different smoothing algorithms and parameters sets. And the selected 3-gram model has 516600 unigrams, 432247 bigrams, and 915962 trigrams respectively.  Note that the temporary and final language models are stored in /data/srilm.
-							</p>
-							<li><strong>Acoustic model</strong></li>
-							<p>The acoustic model of the ASR system is built largely following the Kaldi [CHIME6](https://github.com/kaldi-asr/kaldi/tree/master/egs/chime6/s5_track1) recipes which mainly contain two stages: GMM-HMM state model and TDNN deep learning model.</p>
-							<li><strong>GMM-HMM*</strong></li>
-							<p>For features extraction, we extract 13-dimensional MFCC features plus 3-dimensional pitches. As a start point for triphone models, a monophone model is trained on a subset of 50k utterances.  Then a small triphone model and a larger triphone model are consecutively trained using delta features on a subset of 100k utterances and the whole dataset respectively. In the third triphone model training process, an MLLT-based global transform is estimated iteratively on the top of LDA feature to extract independent speaker features. For the fourth triphone model, feature space maximum likelihood linear regression (fMLLR) with speaker adaptive training (SAT) is applied in the training.</p>
-							<li><strong>NN-HMM</strong></li>
-							<p>Based on the tied-triphone state alignments from GMM, TDNN is configured and trained to replace GMM. Here two data augmentation technologies, speed-perturbation and volume-perturbation are applied on signal level. The input features are 40-dimensional high-resolution MFCC features with cepstral normalization. Note that for each frame-wise input, a 100-dimensional i-vector is also attached, whose extractor was trained on the expanded corpus. An advanced time-delayed neural network (TDNN) baseline using lattice-free maximum mutual information (LF-MMI) training and other strategies is adopted in the system, and you can consult the [paper](https://www.danielpovey.com/files/2018_interspeech_tdnnf.pdf) and the [document](https://kaldi-asr.org/doc/chain.html) for more details.</p>
-							<li><strong>Audio-Visual Speech Recognition</strong></li>
-							<p>Based on the  NN-HMM hybrid ASR system mentioned above, we try to use lipreading to enhance the system. To get visual embeddings, we firstly crop mouth ROIs from video streams, then use the [lipreading TCN](https://github.com/mpc001/Lipreading_using_Temporal_Convolutional_Networks)  to extract 512-dimensional features. Still using TDNN, we simply concentrate two modals embeddings(512+40+100) in the training stage. And the results preliminary show that the video information does help enhance ASR and it still has a very big upgrade space. Here comes the results.</p>
+						<li>
+						<p><strong>Data preparation</strong></p>
+						<ul class="a">
+						<li><strong>speech enhancement</strong></li>
+						</ul>
+						<p>We provide two baseline speech enhancement front-ends, Weighted Prediction Error(WPE) dereverberation and  weighted delay-and-sum(DAS) beamforming, to reduce reverberations and noises of speech signals. These two algorithms are implemented with open-source toolkits, <a href="https://github.com/fgnt/nara_wpe">nara_wpe</a> and <a href="https://github.com/xanguera/BeamformIt">BeamformIt</a>, respectively.</p>
+						<ul class="a">
+						<li><strong>prepare data and language directory for kaldi</strong></li>
+						</ul>
+						<p>For training, development, and test sets, we prepare data directories and the lexicon in the format expected by  <a href="http://kaldi-asr.org/doc/data_prep.html">kaldi</a> respectively. Note that we choose <a href="https://github.com/aishell-foundation/DaCiDian.git">DaCiDian</a> raw resource and convert it to kaldi lexicon format.</p>
+						</li>
+						<li>
+						<p><strong>Language model</strong></p>
+						<p>We segment MISP speech transcription for language model training by applying <a href="https://github.com/aishell-foundation/DaCiDian.git">DaCiDian</a> as dict and <a href="https://github.com/fxsjy/jieba">Jieba</a> open-source toolkit. For the language model, we choose a maximum entropy-based 3-gram model, which achieves the best perplexity, from n-gram(n=2,3,4) models trained on MISP speech transcripts with different smoothing algorithms and parameters sets. And the selected 3-gram model has 516600 unigrams, 432247 bigrams, and 915962 trigrams respectively.  Note that the temporary and final language models are stored in /data/srilm.</p>
+						</li>
+						<li>
+						<p><strong>Acoustic model</strong></p>
+						<p>The acoustic model of the ASR system is built largely following the Kaldi <a href="https://github.com/kaldi-asr/kaldi/tree/master/egs/chime6/s5_track1">CHIME6</a> recipes which mainly contain two stages: GMM-HMM state model and TDNN deep learning model.</p>
+						<ul class="a">
+						<li>
+						<p><strong>GMM-HMM</strong></p>
+						<p>For features extraction, we extract 13-dimensional MFCC features plus 3-dimensional pitches. As a start point for triphone models, a monophone model is trained on a subset of 50k utterances.  Then a small triphone model and a larger triphone model are consecutively trained using delta features on a subset of 100k utterances and the whole dataset respectively. In the third triphone model training process, an MLLT-based global transform is estimated iteratively on the top of LDA feature to extract independent speaker features. For the fourth triphone model, feature space maximum likelihood linear regression (fMLLR) with speaker adaptive training (SAT) is applied in the training.</p>
+						</li>
+						<li>
+						<p><strong>NN-HMM</strong></p>
+						<p>Based on the tied-triphone state alignments from GMM, TDNN is configured and trained to replace GMM. Here two data augmentation technologies, speed-perturbation and volume-perturbation are applied on signal level. The input features are 40-dimensional high-resolution MFCC features with cepstral normalization. Note that for each frame-wise input, a 100-dimensional i-vector is also attached, whose extractor was trained on the expanded corpus. An advanced time-delayed neural network (TDNN) baseline using lattice-free maximum mutual information (LF-MMI) training and other strategies is adopted in the system, and you can consult the <a href="https://www.danielpovey.com/files/2018_interspeech_tdnnf.pdf">paper</a> and the <a href="https://kaldi-asr.org/doc/chain.html">document</a> for more details.</p>
+						</li>
+						</ul>
+						</li>
+						<li>
+						<p><strong>Audio-Visual Speech Recognition</strong></p>
+						<p>Based on the  NN-HMM hybrid ASR system mentioned above, we try to use lipreading to enhance the system. To get visual embeddings, we firstly crop mouth ROIs from video streams, then use the <a href="https://github.com/mpc001/Lipreading_using_Temporal_Convolutional_Networks">lipreading TCN</a>  to extract 512-dimensional features. Still using TDNN, we simply concentrate two modals embeddings(512+40+100) in the training stage. And the results preliminary show that the video information does help enhance ASR and it still has a very big upgrade space. Here comes the results.</p>
+						</li>
 						</ul>
 						<p></p>
 					</div>
 				</section>
 
-				<section class="wrapper style1">
+				<section class="wrapper style2">
 					<div class="container">
 						<h1 style="font-size: 120%;">Quick start</h1>
 						<ul><li><strong>Setting Local System Jobs</strong></li></ul>
@@ -94,21 +111,6 @@ div.ml1 {
 						export train_cmd=run.pl</br>
 						export decode_cmd=run.pl</code></p>
 					</div>
-						<p></p>
-
-						<ul>
-						<li><strong>Download Coordinate Information Used to Crop ROI</strong></li>
-						</ul>
-						<div class="ml1">
-							<code><p>dropbox url:https://www.dropbox.com/s/m3a14wvukfkjqmr/misp2021_task2_roi.zip?dl=0
-							verification code: jTNEJkp83c</br></p>
-							<p>
-							Baidu clouddisk url：https://pan.baidu.com/s/1B2Ocj9Gqyi297kZ_ubu-9w </br>
-							verification code：1p1j </br>
-							</p>
-							<p>
-							MD5：50e2a2ea10a436fd389d6df1f9881831</code></p>
-						</div>
 						<p></p>
 						<ul>
 						<li><strong>Setting  Paths</strong></li>
