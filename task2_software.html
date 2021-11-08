@@ -4,6 +4,12 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<style>
+div.ml1 {
+  margin-left: 30px;
+}
+</style>
+
 <html>
 	<head>
 		<title>MISP Challenge-Task2 Software</title>
@@ -79,30 +85,35 @@
 					</div>
 				</section>
 
-				<section class="wrapper style2">
+				<section class="wrapper style1">
 					<div class="container">
 						<h1 style="font-size: 120%;">Quick start</h1>
 						<ul><li><strong>Setting Local System Jobs</strong></li></ul>
+						<div class="ml1">
 						<p><code># Setting local system jobs (local CPU - no external clusters)</br>
 						export train_cmd=run.pl</br>
 						export decode_cmd=run.pl</code></p>
+					</div>
 						<p></p>
 
 						<ul>
 						<li><strong>Download Coordinate Information Used to Crop ROI</strong></li>
 						</ul>
-						<code><p>dropbox url:https://www.dropbox.com/s/m3a14wvukfkjqmr/misp2021_task2_roi.zip?dl=0
-						verification code: jTNEJkp83c</br></p>
-						<p>
-						Baidu clouddisk url：https://pan.baidu.com/s/1B2Ocj9Gqyi297kZ_ubu-9w </br>
-						verification code：1p1j </br>
-						</p>
-						<p>
-						MD5：50e2a2ea10a436fd389d6df1f9881831</code></p>
+						<div class="ml1">
+							<code><p>dropbox url:https://www.dropbox.com/s/m3a14wvukfkjqmr/misp2021_task2_roi.zip?dl=0
+							verification code: jTNEJkp83c</br></p>
+							<p>
+							Baidu clouddisk url：https://pan.baidu.com/s/1B2Ocj9Gqyi297kZ_ubu-9w </br>
+							verification code：1p1j </br>
+							</p>
+							<p>
+							MD5：50e2a2ea10a436fd389d6df1f9881831</code></p>
+						</div>
 						<p></p>
 						<ul>
 						<li><strong>Setting  Paths</strong></li>
 						</ul>
+						<div class="ml1">
 						<p><code>--- path.sh ---</br>
 						# Defining Kaldi root directory</br>
 						export KALDI_ROOT=</br>
@@ -124,18 +135,22 @@
 						data_roi =</br>
 						# dictionary directory </br>
 						dict_dir= </code></p>
+					</div>
 						<p></p>
 						<ul>
 						<li><strong>Run Training</strong></li>
 						</ul>
+						<div class="ml1">
 						<p><code>./run.sh 
 						# options:</br>
 						        --stage      -1  change the number to start from different training stages</br>
 						        --nnet_stage -10 the number controls tdnn training stages including preprocessing and postprocessing</code></p>
+						    </div>
 						
 						<ul>
 						<li><strong>Other Tips</strong></li>
 						</ul>
+						<div class="ml1">
 						<p>Here some naming rules for directories produced during the four TDNN models training processing</p>
 						<table class='default'>
 						<thead>
@@ -173,6 +188,7 @@
 						</tr>
 						</tbody>
 						</table>
+					</div>
 					</div>
 				</section>
 
