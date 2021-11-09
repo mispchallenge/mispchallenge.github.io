@@ -4,6 +4,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<style>
+div.ml1 {
+  margin-left: 30px;
+}
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: square;}
+</style>
 <html>
 	<head>
 		<title>MISP Challenge-Task1 Software</title>
@@ -55,8 +62,105 @@
 
 			<section class="wrapper style1">
 					<div class="container">
-						<h1 style="font-size: 150%;">TBA ......</h1>
+						<h1 style="font-size: 150%;">MISP2021 Task 1 - Wake-up word spottig (WWS) baseline systems</h1>
+						<p>For details, please refer to <a href="https://github.com/mispchallenge/misp2021_baseline/tree/master/task1_wws"> Github link </a></p>
 						<p></p>
+						<ul>
+						<li>
+						<p><strong>Introduction</strong></p>
+						<p>This is the baseline system for the Multimodal Information Based Speech Processing Challenge 2021 (MISP2021) challenge task 1. This task concerning the identification of predefined wake word(s) in utterances. ‘1’ indicates that the sample contains wake-up word, and ‘0’ indicates the opposite. For a more detailed description see MISP Challenge task description.</p>
+						</li>
+						<li>
+						<p><strong>System description</strong></p>
+						<p>The system implements a neural network (NN) based approach, where filter bank features are first extracted for each sample, and a network consisting of CNN layers, LSTM layer and fully connected layers is trained to assign labels to the audio samples.</p>
+						</li>
+						<li>
+						<p><strong>Data preparation</strong></p>
+						<ul class="a">
+						<li>
+						<p><strong>prepare data directory</strong></p>
+						<p>For training, development, and test sets, we prepare data directories by extracting the downloaded zip compressed file to the current folder. Here, we only selected the channel 1.</p>
+						<p><code>  unzip  -d ./  *.zip</br>
+
+						  *.zip indicates the file name that needs to be unzipped</code></p>
+						</li>
+						<li>
+						<p><strong>speech augmentation</strong> </p>
+						<p>Simulating reverberant and noisy data from near field speech, noise is widely adopted. We provide a baseline speech simulation tool to add reverberation and noise for speech augmentation. Considering that the negative samples are easier to obtain, we simulate all positive samples and partial negative samples.</p>
+						<ul class="b">
+						<li>
+						<p><strong>add reverberation</strong></p>
+						<p>An open-source toolkit <a href="https://github.com/LCAV/pyroomacoustics">pyroomacoustic</a> is used to add reverberation. The room impulsive response (RIR) is generated according to the actual room size and microphone position.</p>
+						</li>
+						<li>
+						<p><strong>add noise</strong></p>
+						<p>We provide a simple tool to add noise with different signal-to-noise ratio. In our configuration, the reverberated speech is corrupted by the collected noise at seven signal-to-noise ratios (from -15dB to 15dB with a step of 5dB).</p>
+						</li>
+						</ul>
+						</li>
+						</ul>
+						</li>
+						<li>
+						<p><strong>Audio Wake-up Word Spotting</strong></p>
+						<p>For features extraction, we employ 40-dimensional filter bank (FBank) features normalized by global mean and variance as the input of the audio WWS system. The final output of the models compared with the preset threshold after sigmoid operation to calculate the false reject rate (FRR) and false alarm rate (FAR). Here comes the results.</p>
+						</li>
+						</ul>
+
+						<h2>Setting Paths</h2>
+						<ul>
+						<li><strong>data prepare</strong></li>
+						</ul>
+						<div class="ml1">
+						<p><code># Here, the given tool can simulate the positive samples directly. If you need to simulate the negative samples, you need to modify the default configuration.</br>
+						--- data_prepare/run.sh ---</br>
+						# Defining corpus directory</br>
+						data_root=</br>
+						# Defining path to python interpreter</br>
+						python_path=</code></p>
+					</div>
+						<ul>
+						<li><strong>kws_net_only_audio</strong></li>
+						</ul>
+						<div class="ml1">
+						<p><code>--- kws_net_only_audio/run.sh ---</br>
+						# Defining corpus directory</br>
+						data_root=</br>
+						# Defining path to python interpreter</br>
+						python_path=</code></p>
+					</div>
+
+						<h2>Running the baseline audio system</h2>
+						<ul>
+						<li><strong>Simulation (optional)</strong></li>
+						</ul>
+						<div class="ml1">
+						<p><code>cd data_prepare</br>
+						sh run.sh</code></p>
+						</div>
+						<ul>
+						<li><strong>Run Training</strong></li>
+						</ul>
+						<div class="ml1">
+						<p><code>cd ../kws_net_only_audio</br>
+						sh run.sh</code></p>
+					</div>
+						<h2>Requirments</h2>
+						<ul>
+						<li>
+						<p><strong>pytorch</strong></p>
+						</li>
+						<li>
+						<p><strong>python packages:</strong></p>
+						<p>numpy</p>
+						<p>tqdm</p>
+						<p><a href="https://github.com/LCAV/pyroomacoustics">pyroomacoustic</a></p>
+						<p><a href="https://github.com/bastibe/python-soundfile">soundfile</a></p>
+						</li>
+						<li>
+						<p><strong>other tools:</strong></p>
+						<p><a href="http://sox.sourceforge.net/">sox</a> </p>
+						</li>
+						</ul>
 					</div>
 				</section>
 
