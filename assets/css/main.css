@@ -62,7 +62,7 @@ mark {
 
 input::-moz-focus-inner {
 	border: 0;
-	padding: 0;		
+	padding: 0;
 }
 
 input, select, textarea {
@@ -129,7 +129,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table, blockquote {
-		margin: 0 0 1em 0;
+		margin: 0 0 2em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -148,11 +148,6 @@ input, select, textarea {
 			font-style: normal;
 			font-weight: 300;
 		}
-
-	h1 {
-		font-size: 2.05em;
-		letter-spacing: -0.025em;
-	}
 
 	h2 {
 		font-size: 1.75em;
@@ -191,16 +186,10 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: -3% auto -2% auto;
+		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
 	}
-
-/*	.container1 {
-		margin: -3% auto -1% auto;
-		max-width: 100%;
-		width: 1400px;
-	}*/
 
 		@media screen and (max-width: 1680px) {
 
@@ -2082,10 +2071,6 @@ input, select, textarea {
 	}
 
 		.image img {
-			width: 30%;
-  			height: 30%;
-  			align-items: center;
-  			justify-content: center;
 			display: block;
 			border-radius: 5px;
 		}
@@ -2099,15 +2084,8 @@ input, select, textarea {
 		}
 
 			.image.left img {
-				width: 60%;
-  				height: 60%;
- 				/*display: flex;*/
-  				border-radius: 50%;
-  				align-items: center;
-  				justify-content: center;
-  				overflow: hidden;
 				display: block;
-				/*width: 100%;*/
+				width: 100%;
 			}
 
 		.image.fit {
@@ -2392,51 +2370,11 @@ input, select, textarea {
 	}
 
 		table.default {
-			width: 70%;
-			border:1px solid ;
+			width: 100%;
 		}
 
-			table.default tr {
+			table.default tbody tr {
 				border-bottom: solid 1px #e0e0e0;
-				text-align: center;
-			}
-
-			table.default tbody {
-				border-bottom: solid 1px;
-			}
-
-			table.default td {
-				padding: 0.3sem 0.5em 0.3em 0.5em;
-				text-align: center;
-				vertical-align: center;
-			}
-
-			table.default th {
-				font-weight: 800;
-				padding: 0.3em 0.5em 0.3em 0.5em;
-				text-align: center;
-				vertical-align: center;
-			}
-
-			table.default thead {
-				background-color: #555555;
-				background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-				background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-				color: #fff;
-			}
-
-/*		table.tabel1 {
-			width: 70%;
-			border:1px solid ;
-		}
-
-			table.default tr {
-			}
-
-			table.default tbody {
-				border-bottom: solid 1px;
 			}
 
 			table.default td {
@@ -2444,7 +2382,7 @@ input, select, textarea {
 			}
 
 			table.default th {
-				font-weight: 800;
+				font-weight: 600;
 				padding: 0.5em 1em 0.5em 1em;
 				text-align: left;
 			}
@@ -2456,8 +2394,7 @@ input, select, textarea {
 				background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 				color: #fff;
-			}*/
-
+			}
 
 /* Button */
 
@@ -2578,7 +2515,7 @@ input, select, textarea {
 		}
 
 		.box.post .inner {
-			margin-left: calc(20% + 2em);
+			margin-left: calc(30% + 2em);
 		}
 
 			.box.post .inner > :last-child {
@@ -2737,15 +2674,15 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-image: url("../../images/banner1.png");
+		background-image: url("../../images/banner.jpg");
 		background-position: center center;
 		background-size: cover;
-		height: 13em;
+		height: 28em;
 		text-align: center;
 		position: relative;
 	}
 
-/*		#banner header {
+		#banner header {
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -2754,9 +2691,9 @@ input, select, textarea {
 			background: rgba(27, 27, 27, 0.75);
 			color: #fff;
 			padding: 1.5em 0;
-		}*/
+		}
 
-/*			#banner header h2 {
+			#banner header h2 {
 				display: inline-block;
 				margin: 0;
 				font-size: 1.25em;
@@ -2773,7 +2710,7 @@ input, select, textarea {
 
 					#banner header h2 a:hover {
 						border-bottom-color: transparent;
-					}*/
+					}
 
 			#banner header .button {
 				vertical-align: middle;
@@ -3293,13 +3230,6 @@ input, select, textarea {
 				font-size: 11pt;
 				line-height: 1.35em;
 			}
-
-			h1 {
-				font-size: 0.75em;
-				letter-spacing: 0;
-				line-height: 1.35em;
-			}
-				
 
 			h2 {
 				font-size: 1.25em;
