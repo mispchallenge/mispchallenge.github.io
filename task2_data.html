@@ -115,12 +115,17 @@
 							    </tr>
 							</table>
 						</center>
-						<p>There isn’t duplicate speaker and room in training, development test and evaluation test sets.</p>	
+						<p><strong>There isn’t duplicate speaker and room in training, development test and evaluation test sets.For training and development sets,  the released video includes the far scenario and the middle scenario while the released audio includes the far scenario, the middle scenario and the near scenario. But for the evaluation set, we only release the video in far scenario and the audio in far scenario.</strong></p>	
 						<p></p>
+
+						<h3 style="font-size: 120%;">Directory Structure</h3>
+						<p>
+							There is a pdf file in the top-level directory, called data-specification.pdf, which describes the introduction of the data set. There are two txt files in the “doc” folder, speaker_info.txt describes the gender and age range of every speaker, and room_info.txt describes the size of every room. We also provide checkboard images for each far wide-angle camera as well as computed camera intrinsic params so that such distortions can be undone. There are two far wide-angle cameras used in recording. The checkboard images of the far wide-angle camera used in the room which index is greater than or equal to 50 are store in the “checkboard_images/room_ge_50” folder while the images which index is less than 50 are store in the “checkboard_images/room_lt_50” folder.
+						</p>
 						<p>The audio data, video data and the transcriptions follow this directory structure. Each audio/video/transcription directory has subdirectories for training, development, and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording device in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording device in the video directory.</p>
 						<center>
 							<figure style="padding:0px;border:0px; margin:10px">
-                            <img src="images/Fig4.png" style="width:70%;padding:0px;border:0" />
+                            <img src="images/Fig4.png" style="width:50%;padding:0px;border:0" />
                             </figure>
 						</center>
 						<p><b>Audio</b></p>
