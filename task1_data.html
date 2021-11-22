@@ -67,9 +67,9 @@
 							    </tr> 
 							    <tr style="vertical-align: center; border: solid 1px;">
 							        <th style="border: solid 1px;">Positive</th>
-							        <th valign="middle" style="border: solid 1px;">Negative</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</th>
 							        <th style="border: solid 1px;">Positive</th>
-							        <th valign="middle" style="border: solid 1px;">Negative</th>
+							        <th valign="middle" style="border: solid 1px;">Negtive</th>
 							        <!-- <th style="border: solid 1px;">Positive</th>
 							        <th valign="middle" style="border: solid 1px;">Negtive</th>
 							        <th style="border: solid 1px;">Positive</th>
@@ -128,7 +128,7 @@
 						</center>
 
 						<p>
-							We plan to release an audio-visual wake word spotting dataset collected in home TV scenarios. The recording scenes can refer to Fig. 1. The wake-up word is “Xiao T Xiao T”. There are more than 300 speakers. The dataset’s accent is Mandarin and all data were collected in more than 30 real rooms. A sample will be taken as a positive sample if the wake-up word is included, otherwise it will be regarded as a negative sample. For each sample, at most one wake-up word is included. For the duration, different scenarios data (i.e. far, middle, and near field) are calculated separately. The statistics of the dataset are shown in Tab.1 above. 
+							We plan to release an audio-visual wake word spotting dataset collected in home TV scenarios. The recording scenes can refer to Fig. 1. The wake-up word is “Xiao T Xiao T”. There are 338 speakers. The dataset’s accent is Mandarin and all data were collected in 33 real rooms. A sample will be taken as a positive sample if the wake-up word is included, otherwise it will be regarded as a negative sample. For each sample, at most one wake-up word is included. For the duration, different scenarios data (i.e. far, middle, and near field) are calculated separately. The statistics of the dataset are shown in Tab.1 above. 
 						</p>
 
 						<center>
@@ -138,7 +138,7 @@
 						</center>
 
 						<p>
-						The data was divided into three subsets: Training, Development, Evaluation. Dataset split follows speaker and room independence, i.e. no speaker and room are repeated among the three splits. The audio data, video data follow the directory structure shown in Tab.2. Each positive/negative directory has subdirectories for audio/video. Each audio/video directory has subdirectories for training, development and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording devices in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording devices in the video directory. In addition, we will provide some noise data. 
+						The data was divided into three subsets: Training, Development and Evaluation. Dataset split follows speaker and room independence, i.e. no speaker and room are repeated among the three splits. The audio data, video data follow the directory structure shown in Tab.2. Each positive/negative directory has subdirectories for audio/video. Each audio/video directory has subdirectories for training, development, and evaluation sets. Each train/dev/eval directory has subdirectories for far, middle, and near field recording devices in the audio directory. Each train/dev/eval directory has subdirectories for far and middle field recording devices in the video directory. In addition, we will provide some noise data. 
 						</p>
 						<p><b>Audio</b></p>
 						<p>
@@ -149,7 +149,7 @@
 							< Room ID >_< Speakers IDs >_< Configuration ID >_< Index >_Middle_< Speaker ID >_< Channel ID >_< Segment ID 1>_< Segment ID 2 >.wav</br> 
 							Near-field audio:</br> 
 							< Room ID >_< Speakers IDs >_< Configuration ID >_< Index >_Near_< Speaker ID >_< Segment ID 1 >_< Segment ID 2 >.wav</br> 
-							Here, < Segment ID 1 > and < Segment ID 2 > represent the start and the end time points of utterance segmentation in original sample respectively, which can be used to distinguish different examples.</br> 
+							Here,  < Segment ID 1 >  and < Segment ID 2 >  represents the number of utterance segmentation.</br> 
 						</p>
 						<p><b>Video</b></p>
 						<p>
