@@ -10,6 +10,7 @@ div.ml1 {
 }
 ul.a {list-style-type: circle;}
 ul.b {list-style-type: square;}
+ul.c {list-style-type: square;}
 </style>
 <html>
 	<head>
@@ -100,7 +101,7 @@ ul.b {list-style-type: square;}
 						<p>We provide a simple tool to add noise with different signal-to-noise ratio. In our configuration, the reverberated speech is corrupted by the collected noise at seven signal-to-noise ratios (from -15dB to 15dB with a step of 5dB).</p>
 						</li>
 						<li>
-						<p><strong>download the pretrained model and coordinate information used to crop ROI</strong></p>
+						<p><strong>download the pretrained model</strong></p>
 						<p><code>dropbox url:https://www.dropbox.com/s/4pe3j2swf2cwvik/lipreading_LRW.pt?dl=0</br>
 						verification code: zxzs23</code></p>
 
@@ -111,13 +112,31 @@ ul.b {list-style-type: square;}
 						</li>
 						<li>
 						<p><strong>download coordinate information used to crop ROI</strong></p>
-						<p><code>  dropbox url:https://www.dropbox.com/s/g6pst3fr5a13m8y/misp2021_task1_roi_midfield.zip?dl=0</br>
-						verification code: zxzs23</code></p>
+						<ul>
+						<li>
+						<p><strong>mid-field</strong></p>
+						<p>dropbox url:https://www.dropbox.com/s/g6pst3fr5a13m8y/misp2021_task1_roi_midfield.zip?dl=0</br>
+								verification code: zxzs23</p>
+						<p>Baidu Netdisk url：https://pan.baidu.com/s/1XSWBDx08EQR3aP1j2TXhXg</br>
+							verification code：6pyk </p>
+						<p>MD5：581ec2a5daba9ee16c03ea022577b69a</p>
+						</li>
+						<li>
+						<p><strong>far-field</strong></p>
+						<p>misp2021_task1_roi_farfield.zip</br> 
+						dropbox url:https://www.dropbox.com/s/0gn4djyzsp2yzr1/misp2021_task1_roi_farfield.zip?dl=0</br> 
+						verification code: zxzs</br>    
+						Baidu Netdisk url：https://pan.baidu.com/s/1v5BANcgt1lk8OikUCUxL5g</br> 
+						verification code：zxzs</br> 
+						MD5: b6d84a6aaa10ff5d72d7381c9758860b</p>    
 
-						<p><code>Baidu clouddisk url：https://pan.baidu.com/s/1XSWBDx08EQR3aP1j2TXhXg</br>
-							verification code：6pyk</code></p>
-
-						<p><code>MD5：581ec2a5daba9ee16c03ea022577b69a</code></p>
+						<p>lip_npy_far.zip</br> 
+						dropbox url:https://www.dropbox.com/s/db68266ck3rlk43/lip_npy_far.zip?dl=0</br> 
+						verification code: zxzs</br> 
+						Baidu Netdisk url：https://pan.baidu.com/s/1v5BANcgt1lk8OikUCUxL5g</br> 
+						verification code：zxzs</br>     
+						MD5：1dbb0f589fff40cbafa0c9be88aa93a3 </p>
+						</li>
 						</li>
 						</ul>
 <!-- 						</li>
@@ -165,12 +184,19 @@ ul.b {list-style-type: square;}
 							        <td>0.12</td>
 							        <td>0.33</td>
 							    </tr>
-							    <tr style="border-bottom: solid 1px;">
+							    <tr>
 							        <td>Audio-visual</td>
 							        <td>Middle</td>
 							        <td>0.06</td>
 							        <td>0.07</td>
 							        <td>0.13</td>
+							    </tr>
+							    <tr style="border-bottom: solid 1px;">
+							        <td>Audio-visual</td>
+							        <td>Far</td>
+							        <td>0.12</td>
+							        <td>0.14</td>
+							        <td>0.26</td>
 							    </tr>
 							</table>
 						</center>
