@@ -84,23 +84,21 @@
   <li><p>Make sure every row of  the transcript use the following format, which is a key-word separated by a space character:</p></li>
   </ul>
   <blockquote>
-    <p>segment_id 1or0</p>
-  </blockquote>
-  <p>the segment id is named as follows:</p>
-  <blockquote>
-    <p>< Room ID >_< Speakers IDs >_< Configuration ID >_< Index >_< Speaker ID >_< Start time >_< end time > </p>
+    <p>utterance_id 1or0</p>
   </blockquote>
   <ul>
-  <li><p>Here is a <a href="doc/task1_sub_exp.zip">submission example</a> and the whole <a href="doc/task1_devids.txt">segment_id list</a> for development set provided. Note the number of segments in truth ground is smaller than those directly extracted from the transcript(.textgrid files), since some of the segments labeled in .textgrid files lack relevant signal or video segments in wav or mp4 files for early shutdown of  recording device in the recording process.</p></li>
+  <li><p>Here is a <a href="doc/task1_eval_exp.zip">submission example</a> and the whole <a href="doc/task1_eval_exp.txt">utterance_id list</a> for eval set provided. Note the number of segments in truth ground is smaller than those directly extracted from the transcript(.textgrid files), since some of the segments labeled in .textgrid files lack relevant signal or video segments in wav or mp4 files for early shutdown of  recording 
+	  
+	  ice in the recording process.</p></li>
   <li><p>When the status turns to "Finished" you can refresh the page the check the scores below. You can also click the button named “View scoring output log” to check if you miss any segments in your submission, for example:</p></li>
   </ul>
   <blockquote>
     <p>stdout.txt</p>
     <p>In your submission, some segments are missing. Please check and submit again!<br />
     Miss segments:<br/>
-    R05_S144145_C0001_I1_144_290733_291654<br/>
-    R05_S144145_C0001_I1_144_714266_715085<br/>
-    R05_S144145_C0001_I1_144_720176_721666</p>
+    0<br/>
+    1<br/>
+    2</p>
   </blockquote>
 </blockquote>
 <p><img src="/images/submit.png" alt="" /></p>
