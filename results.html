@@ -77,10 +77,52 @@
 					</div>
 				</section> -->
 			<!-- Task1 -->
+
 			<section class="wrapper style1">
 					<div class="container">
 						<h1 style="font-size: 150%;">Task1</h1>
 						<p></p>
+
+                        <!--bar-->
+						<div id="bar_div0" style=""><canvas id="chart0"
+							width="1110" height="240" style="display: block; width: 1110px; height: 240px;">
+						  </canvas>
+						</div>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+							integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+							crossorigin="anonymous"></script>
+						<script>
+							new Chart(document.getElementById("chart0"), {
+								"type": "horizontalBar",
+								"data": {
+									"labels": ["USTC", "Institute of Acoustics, CAS", "STC-innovations Ltd, ITMO University", "Toshiba Cambridge Research Laboratory", "Qdreamer", "Cloudwalk-XMU", "Johns Hopkins University", "OPPO", "Brno University of Technology", "Academia Sinica", "IISC", "Baseline"],
+									"datasets": [{
+										"label": "Eval",
+										"data": [31.0, 35.1, 35.8, 37.5, 39, 40.2, 42.1, 42.4, 44.3, 46.8, 50.7, 51.3],
+										"fill": false,
+										"backgroundColor": ["rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)"
+										],
+										"borderWidth": 1
+									}]
+								},
+								"options": {
+									"scales": {
+										"xAxes": [{
+											"ticks": {
+												"beginAtZero": false
+											}
+										}]
+									}
+								}
+							});
+						</script>
+
+
 
 						<div class="fixed-table-container" style="padding-bottom: 0px;">
 							<div class="fixed-table-header" style="display: none;">
@@ -273,6 +315,46 @@
 				<div class="container">
 					<h1 style="font-size: 150%;">Task2</h1>
 					<p></p>
+
+                    <!--bar-->
+					<div id="bar_div0" style=""><canvas id="chart1"
+						width="1110" height="240" style="display: block; width: 1110px; height: 240px;">
+					  </canvas>
+					</div>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+						integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+						crossorigin="anonymous"></script>
+					<script>
+						new Chart(document.getElementById("chart1"), {
+							"type": "horizontalBar",
+							"data": {
+									"labels": ["USTC", "Institute of Acoustics, CAS", "STC-innovations Ltd, ITMO University", "Toshiba Cambridge Research Laboratory", "Qdreamer", "Cloudwalk-XMU", "Johns Hopkins University", "OPPO", "Brno University of Technology", "Academia Sinica", "IISC", "Baseline"],
+									"datasets": [{
+										"label": "Eval",
+										"data": [31.0, 35.1, 35.8, 37.5, 39, 40.2, 42.1, 42.4, 44.3, 46.8, 50.7, 51.3],
+										"fill": false,
+										"backgroundColor": ["rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)"
+										],
+										"borderWidth": 1
+									}]
+							},
+							"options": {
+								"scales": {
+									"xAxes": [{
+										"ticks": {
+											"beginAtZero": false
+										}
+									}]
+								}
+							}
+						});
+					</script>
+
 
 					<div class="fixed-table-container" style="padding-bottom: 0px;">
 						<div class="fixed-table-header" style="display: none;">
