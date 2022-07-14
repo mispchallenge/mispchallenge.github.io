@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MISP Challenge-Contact</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			th, td {
+				text-align: left;
+				padding: 8px;
+			}
+
+			tr:nth-child(even){background-color: #f2f2f2}
+
+			th {
+				background-color: #d60f519f;
+				color: white;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+					<h1 style="font-size: 120%;  margin: -2% 0 -2% 0"><a href="index.html" id="logo">Multimodal Information Based Speech Processing (MISP) Challenge 2021</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="overview.html">Overview</a><li>
+								<li>
+									<a href="#">Task1</a>
+									<ul>
+										<li><a href="task1_data.html">Data</a></li>
+										<li><a href="task1_software.html">Software</a></li>
+										<li><a href="task1_instructions.html">Instructions</a></li>
+						                <li><a href="task1_leaderboard.html">Leaderboard</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Task2</a>
+									<ul>
+										<li><a href="task2_data.html">Data</a></li>
+										<li><a href="task2_software.html">Software</a></li>
+										<li><a href="task2_instructions.html">Instructions</a></li>
+						                <li><a href="task2_leaderboard.html">Leaderboard</a></li>
+									</ul>
+								</li>
+								<li><a href="download.html">Registration</a></li>
+								<li class="current"><a href="results.html">Results</a></li>
+								<!-- <li><a href="contact.html">Contact</a></li> -->
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+<!-- 				<section class="wrapper style1">
+					<div class="container">
+						<h1 style="font-size: 150%;">To Be Anounced</h1>
+						<p></p>
+					</div>
+				</section> -->
+			<!-- Task1 -->
+
+			<section class="wrapper style1">
+					<div class="container">
+						<h1 style="font-size: 150%;">Task1</h1>
+						<p></p>
+
+                        <!--bar-->
+						<div id="bar_div0" style=""><canvas id="chart0"
+							width="1110" height="240" style="display: block; width: 1110px; height: 240px;">
+						  </canvas>
+						</div>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+							integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+							crossorigin="anonymous"></script>
+						<script>
+							new Chart(document.getElementById("chart0"), {
+								"type": "horizontalBar",
+								"data": {
+									"labels": ["USTC", "Institute of Acoustics, CAS", "STC-innovations Ltd, ITMO University", "Toshiba Cambridge Research Laboratory", "Qdreamer", "Cloudwalk-XMU", "Johns Hopkins University", "OPPO", "Brno University of Technology", "Academia Sinica", "IISC", "Baseline"],
+									"datasets": [{
+										"label": "Eval",
+										"data": [31.0, 35.1, 35.8, 37.5, 39, 40.2, 42.1, 42.4, 44.3, 46.8, 50.7, 51.3],
+										"fill": false,
+										"backgroundColor": ["rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)"
+										],
+										"borderWidth": 1
+									}]
+								},
+								"options": {
+									"scales": {
+										"xAxes": [{
+											"ticks": {
+												"beginAtZero": false
+											}
+										}]
+									}
+								}
+							});
+						</script>
+
+
+
+						<div class="fixed-table-container" style="padding-bottom: 0px;">
+							<div class="fixed-table-header" style="display: none;">
+							  <table></table>
+							</div>
+							<div class="fixed-table-body">
+
+							  <table class="datatable table table-hover table-condensed table-striped" data-bar-hline="true"
+								data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-id-field="name"
+								data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true"
+								data-show-chart="true" data-show-rank="true" data-sort-name="eval_real" data-sort-order="asc"
+								data-scatter-x="eval_real" data-scatter-y="dev_real" data-page-list="[5,10,20,50,all]"
+								data-show-header="true" data-show-pagination-switch="true" data-striped="true"
+								data-toolbar="#datatable_toolbar0">
+								<thead>
+								  <tr>
+									<th class="sep-left-cell text-center" style="" data-field="0" tabindex="0">
+									  <div class="th-inner "><strong>Rank</strong></div>
+									  <div class="fht-cell"></div>
+									</th>
+									<th class="sep-left-cell text-center" style="" data-field="name" tabindex="0">
+									  <div class="th-inner sortable both">
+										<strong>Team</strong>
+									  </div>
+									  <div class="fht-cell"></div>
+									</th>
+									<th class="sep-left-cell text-center" style="" data-field="paper" tabindex="0">
+									  <div class="th-inner sortable both">
+										<strong>Paper</strong>
+									  </div>
+									  <div class="fht-cell"></div>
+									</th>
+									<th class="sep-left-cell text-center" style="" data-field="eval_sim" tabindex="0">
+									  <div class="th-inner sortable both">
+										<strong>Dev</strong>
+										<span class="glyphicon glyphicon-stats text-muted"></span>
+									  </div>
+									  <div class="fht-cell"></div>
+									</th>
+									<th class="sep-right-cell sep-left-cell text-center" style="" data-field="eval_real" tabindex="0">
+									  <div class="th-inner sortable both asc">
+										<strong>Eval</strong>
+										<span class="glyphicon glyphicon-stats text-muted"></span>
+									  </div>
+									  <div class="fht-cell"></div>
+									</th>
+								  </tr>
+								</thead>
+			  
+								<tbody>
+								  <tr data-index="0">
+									<td class="sep-left-cell text-center" style="">1</td>
+									<td class="sep-left-cell text-center" style="">USTC</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_du.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">31.1 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">31.0 %</td>
+								  </tr>
+								  <tr data-index="1">
+									<td class="sep-left-cell text-center" style="">2</td>
+									<td class="sep-left-cell text-center" style="">Institute of Acoustics, CAS</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_chen.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">33.5 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">35.1 %</td>
+								  </tr>
+								  <tr data-index="2">
+									<td class="sep-left-cell text-center" style="">3</td>
+									<td class="sep-left-cell text-center" style="">STC-innovations Ltd, ITMO University</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_medennikov.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">33.5 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">35.8 %</td>
+								  </tr>
+								  <tr data-index="3">
+									<td class="sep-left-cell text-center" style="">4</td>
+									<td class="sep-left-cell text-center" style="">Toshiba Cambridge Research Laboratory</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_zorila.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">35.9 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">37.5 %</td>
+								  </tr>
+								  <tr data-index="4">
+									<td class="sep-left-cell text-center" style="">5</td>
+									<td class="sep-left-cell text-center" style="">Qdreamer</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_tang.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">37.6 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">39.0 %</td>
+								  </tr>
+								  <tr data-index="5">
+									<td class="sep-left-cell text-center" style="">6</td>
+									<td class="sep-left-cell text-center" style="">Cloudwalk-XMU</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_yang.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">41.6 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">40.2 %</td>
+								  </tr>
+								  <tr data-index="6">
+									<td class="sep-left-cell text-center" style="">7</td>
+									<td class="sep-left-cell text-center" style="">Johns Hopkins University</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_arora.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">41.8 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">42.1 %</td>
+								  </tr>
+								  <tr data-index="7">
+									<td class="sep-left-cell text-center" style="">8</td>
+									<td class="sep-left-cell text-center" style="">OPPO</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_ren.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">42.0 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">42.4 %</td>
+								  </tr>
+								  <tr data-index="8">
+									<td class="sep-left-cell text-center" style="">9</td>
+									<td class="sep-left-cell text-center" style="">Brno University of Technology</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_zmolikova.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">42.8 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">44.3 %</td>
+								  </tr>
+								  <tr data-index="9">
+									<td class="sep-left-cell text-center" style="">10</td>
+									<td class="sep-left-cell text-center" style="">Academia Sinica</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_lee.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">47.3 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">46.8 %</td>
+								  </tr>
+								  <tr data-index="10">
+									<td class="sep-left-cell text-center" style="">11</td>
+									<td class="sep-left-cell text-center" style="">IISC</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/abstracts/CHiME_2020_abstract_sreeram.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">51.0 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">50.7 %</td>
+								  </tr>
+								  <tr data-index="11">
+									<td class="sep-left-cell text-center" style="">12</td>
+									<td class="sep-left-cell text-center" style="">Baseline</td>
+									<td class="sep-left-cell text-center" style="">
+									  <a
+										href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_watanabe.pdf">[paper]</a>
+									</td>
+									<td class="sep-left-cell text-center" style="">51.8 %</td>
+									<td class="sep-right-cell sep-left-cell text-center" style="">51.3 %</td>
+								  </tr>
+								</tbody>
+							  </table>
+							</div>
+							<div class="fixed-table-footer" style="display: none;">
+							  <table>
+								<tbody>
+								  <tr></tr>
+								</tbody>
+							  </table>
+							</div>
+							<div class="fixed-table-pagination" style="display: none;"></div>
+						  </div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</section>
+
+			<!-- Task2 -->
+			<section class="wrapper style2">
+				<div class="container">
+					<h1 style="font-size: 150%;">Task2</h1>
+					<p></p>
+
+                    <!--bar-->
+					<div id="bar_div0" style=""><canvas id="chart1"
+						width="1110" height="240" style="display: block; width: 1110px; height: 240px;">
+					  </canvas>
+					</div>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+						integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+						crossorigin="anonymous"></script>
+					<script>
+						new Chart(document.getElementById("chart1"), {
+							"type": "horizontalBar",
+							"data": {
+									"labels": ["USTC", "Institute of Acoustics, CAS", "STC-innovations Ltd, ITMO University", "Toshiba Cambridge Research Laboratory", "Qdreamer", "Cloudwalk-XMU", "Johns Hopkins University", "OPPO", "Brno University of Technology", "Academia Sinica", "IISC", "Baseline"],
+									"datasets": [{
+										"label": "Eval",
+										"data": [31.0, 35.1, 35.8, 37.5, 39, 40.2, 42.1, 42.4, 44.3, 46.8, 50.7, 51.3],
+										"fill": false,
+										"backgroundColor": ["rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)",
+											"rgba(255, 205, 86, 0.5)", "rgba(255, 205, 86, 0.5)"
+										],
+										"borderWidth": 1
+									}]
+							},
+							"options": {
+								"scales": {
+									"xAxes": [{
+										"ticks": {
+											"beginAtZero": false
+										}
+									}]
+								}
+							}
+						});
+					</script>
+
+
+					<div class="fixed-table-container" style="padding-bottom: 0px;">
+						<div class="fixed-table-header" style="display: none;">
+						  <table></table>
+						</div>
+						<div class="fixed-table-body">
+
+						  <table class="datatable table table-hover table-condensed table-striped" data-bar-hline="true"
+							data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-id-field="name"
+							data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true"
+							data-show-chart="true" data-show-rank="true" data-sort-name="eval_real" data-sort-order="asc"
+							data-scatter-x="eval_real" data-scatter-y="dev_real" data-page-list="[5,10,20,50,all]"
+							data-show-header="true" data-show-pagination-switch="true" data-striped="true"
+							data-toolbar="#datatable_toolbar0">
+							<thead>
+							  <tr>
+								<th class="sep-left-cell text-center" style="" data-field="0" tabindex="0">
+								  <div class="th-inner "><strong>Rank</strong></div>
+								  <div class="fht-cell"></div>
+								</th>
+								<th class="sep-left-cell text-center" style="" data-field="name" tabindex="0">
+								  <div class="th-inner sortable both">
+									<strong>Team</strong>
+								  </div>
+								  <div class="fht-cell"></div>
+								</th>
+								<th class="sep-left-cell text-center" style="" data-field="paper" tabindex="0">
+								  <div class="th-inner sortable both">
+									<strong>Paper</strong>
+								  </div>
+								  <div class="fht-cell"></div>
+								</th>
+								<th class="sep-left-cell text-center" style="" data-field="eval_sim" tabindex="0">
+								  <div class="th-inner sortable both">
+									<strong>Dev</strong>
+									<span class="glyphicon glyphicon-stats text-muted"></span>
+								  </div>
+								  <div class="fht-cell"></div>
+								</th>
+								<th class="sep-right-cell sep-left-cell text-center" style="" data-field="eval_real" tabindex="0">
+								  <div class="th-inner sortable both asc">
+									<strong>Eval</strong>
+									<span class="glyphicon glyphicon-stats text-muted"></span>
+								  </div>
+								  <div class="fht-cell"></div>
+								</th>
+							  </tr>
+							</thead>
+		  
+							<tbody>
+							  <tr data-index="0">
+								<td class="sep-left-cell text-center" style="">1</td>
+								<td class="sep-left-cell text-center" style="">USTC</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_du.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">31.1 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">31.0 %</td>
+							  </tr>
+							  <tr data-index="1">
+								<td class="sep-left-cell text-center" style="">2</td>
+								<td class="sep-left-cell text-center" style="">Institute of Acoustics, CAS</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_chen.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">33.5 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">35.1 %</td>
+							  </tr>
+							  <tr data-index="2">
+								<td class="sep-left-cell text-center" style="">3</td>
+								<td class="sep-left-cell text-center" style="">STC-innovations Ltd, ITMO University</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_medennikov.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">33.5 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">35.8 %</td>
+							  </tr>
+							  <tr data-index="3">
+								<td class="sep-left-cell text-center" style="">4</td>
+								<td class="sep-left-cell text-center" style="">Toshiba Cambridge Research Laboratory</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_zorila.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">35.9 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">37.5 %</td>
+							  </tr>
+							  <tr data-index="4">
+								<td class="sep-left-cell text-center" style="">5</td>
+								<td class="sep-left-cell text-center" style="">Qdreamer</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_tang.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">37.6 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">39.0 %</td>
+							  </tr>
+							  <tr data-index="5">
+								<td class="sep-left-cell text-center" style="">6</td>
+								<td class="sep-left-cell text-center" style="">Cloudwalk-XMU</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_yang.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">41.6 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">40.2 %</td>
+							  </tr>
+							  <tr data-index="6">
+								<td class="sep-left-cell text-center" style="">7</td>
+								<td class="sep-left-cell text-center" style="">Johns Hopkins University</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_arora.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">41.8 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">42.1 %</td>
+							  </tr>
+							  <tr data-index="7">
+								<td class="sep-left-cell text-center" style="">8</td>
+								<td class="sep-left-cell text-center" style="">OPPO</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_ren.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">42.0 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">42.4 %</td>
+							  </tr>
+							  <tr data-index="8">
+								<td class="sep-left-cell text-center" style="">9</td>
+								<td class="sep-left-cell text-center" style="">Brno University of Technology</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_zmolikova.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">42.8 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">44.3 %</td>
+							  </tr>
+							  <tr data-index="9">
+								<td class="sep-left-cell text-center" style="">10</td>
+								<td class="sep-left-cell text-center" style="">Academia Sinica</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_lee.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">47.3 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">46.8 %</td>
+							  </tr>
+							  <tr data-index="10">
+								<td class="sep-left-cell text-center" style="">11</td>
+								<td class="sep-left-cell text-center" style="">IISC</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/abstracts/CHiME_2020_abstract_sreeram.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">51.0 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">50.7 %</td>
+							  </tr>
+							  <tr data-index="11">
+								<td class="sep-left-cell text-center" style="">12</td>
+								<td class="sep-left-cell text-center" style="">Baseline</td>
+								<td class="sep-left-cell text-center" style="">
+								  <a
+									href="http://chimechallenge.github.io/chime2020-workshop/papers/CHiME_2020_paper_watanabe.pdf">[paper]</a>
+								</td>
+								<td class="sep-left-cell text-center" style="">51.8 %</td>
+								<td class="sep-right-cell sep-left-cell text-center" style="">51.3 %</td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+						<div class="fixed-table-footer" style="display: none;">
+						  <table>
+							<tbody>
+							  <tr></tr>
+							</tbody>
+						  </table>
+						</div>
+						<div class="fixed-table-pagination" style="display: none;"></div>
+					  </div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</section>			
+
+
+			<!-- Footer -->
+				<div id="footer">
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; All rights reserved</li><li>E-mail: mispchallenge@gmail.com</li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
