@@ -87,7 +87,7 @@ jQuery( document ).ready(function() {
                 position: 'top'
             },
             bar: {
-                height: 240,
+                height: 600,
                 show_xaxis: true,
                 horizontal_line: {
                     enabled: false,
